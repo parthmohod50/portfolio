@@ -1,0 +1,299 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'consolas';
+}
+
+html,
+body {
+  width: 100%;
+  min-height: 100vh;
+  overflow-x: hidden;
+  background-color: white;
+}
+
+nav {
+  width: 100%;
+  top: 0;
+  display: flex;
+  position: fixed;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  background-color: white;
+  box-shadow: 0px 4px 20px rgb(150, 150, 150);
+  z-index: 100;
+}
+
+.nav1 img {
+  margin: 15px;
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+}
+
+.nav1 {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.nav2 i {
+  display: none;
+}
+
+.nav2 {
+  display: flex;
+  align-items: center;
+  font-size: 13px;
+}
+
+.nav3 {
+  display: none;
+}
+
+.nav2 a {
+  border-radius: 8px;
+  padding: 8px 16px;
+  text-decoration: none;
+  color: black;
+}
+
+.nav2 a:hover {
+  background-color: rgb(51, 219, 242);
+}
+
+.nav2 button {
+  font-size: larger;
+  background-color: white;
+  border: white;
+  padding-right: 10px;
+}
+
+#section1 {
+  background-image: url(sky_background.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  min-height: 100vh;
+  padding: 200px 100px 80px;
+}
+
+.home1 h1 {
+  font-size: 50px;
+  color: black;
+}
+
+.home1 p {
+  max-width: 500px;
+  padding-top: 20px;
+  padding-bottom: 50px;
+  font-size: 1.5vw;
+}
+
+.link {
+  display: flex;
+  gap: 10px;
+}
+
+.link a {
+  padding: 10px;
+  margin: 8px;
+  font-size: 40px;
+  text-decoration: none;
+  color: black;
+}
+
+#section2 {
+  background-color: white;
+  padding: 80px 60px;
+  background-color: white;
+}
+
+.about1 h1 {
+  font-size: 40px;
+  text-align: 40px;
+  padding-left: 560px;
+  padding-bottom: 40px;
+}
+
+.about2 {
+  padding: 40px;
+}
+
+.about2 h2 {
+  color: rgb(8, 141, 229);
+  font-size: 30px;
+  padding-bottom: 20px;
+}
+
+.about2 p {
+  font-size: 20px;
+  max-width: 1200px;
+  line-height: 1.7;
+}
+
+#section3 {
+  background-color: white;
+  background-image: url(Mountain_background.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  min-height: 100vh;
+  padding: 100px 60px;
+}
+
+.skill1 h2 {
+  color: rgb(8, 141, 229);
+  font-size: 30px;
+  padding-bottom: 20px;
+  padding-left: 35px;
+}
+
+.skill-card {
+  font-size: 20px;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+.skill-card img {
+  height: 60px;
+  width: 60px;
+  margin: 30px;
+}
+
+#section4 {
+  background-color: #f0f4f8;
+  padding: 80px 60px;
+}
+
+.service-card {
+  background-color: white;
+  padding: 40px 30px;
+  border-radius: 12px;
+  text-align: center;
+}
+
+.service-card img {
+  width: 80px;
+  height: 80px;
+  margin-bottom: 20px;
+  object-fit: contain;
+}
+
+.service-card h3 {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 16px;
+  color: black;
+}
+
+.service-card p {
+  font-size: 15px;
+  color: #444;
+  line-height: 1.7;
+  text-align: justify;
+}
+
+@media (max-width:600px) {
+  .nav2 {
+    display: none;
+  } 
+  
+  .nav3 {
+    display: block;
+    font-size: 20px;
+    cursor: pointer;
+    padding: 10px;
+  }
+
+  #section1 {
+    padding: 150px 40px 50px;
+  }
+
+  .home1 h1 {
+    font-size: 40px; 
+  }
+
+  .home1 p {
+    font-size: 18px;
+    max-width: 100%;
+  }
+
+  .link a {
+    font-size: 30px;
+    margin: 4px;
+  }
+
+  .link a-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  #section2 {
+    padding: 50px 24px;
+  }
+
+  .about1 h1 {
+    font-size: 28px;
+    text-align: center;
+    padding-left: 0;
+  }
+
+  .about2 {
+    padding: 20px 0;
+  }
+
+  .about2 h2 {
+    font-size: 22px;
+  }
+
+  .about2 p {
+    font-size: 15px;
+  }
+
+  #section3 {
+    padding: 60px 24px;
+  }
+
+  .skill h2 {
+    font-size: 24px;
+    padding: 0;
+    text-align: center;
+  }
+
+  skill-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .skill-card {
+    font-size: 14px;
+    padding: 12px;
+  }
+
+  .skill-card img {
+    height: 35px;
+    width: 35px;
+    margin: 10px;
+  }
+
+    #section4 {
+    padding: 50px 24px;
+  }
+
+  .service-grid {
+    grid-template-columns: 1fr;  /* 1 column */
+  }
+
+  .service-head h2 {
+    font-size: 24px;
+  }
+
+}
+
+
+@media (max-width: 768px) {
+  .service-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
