@@ -2,7 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'consolas';
+  font-family: "consolas";
 }
 
 html,
@@ -79,6 +79,7 @@ nav {
   min-height: 100vh;
   padding: 150px 100px 80px;
   display: flex;
+  gap: 100px;
   justify-content: center;
   align-items: center;
 }
@@ -109,9 +110,9 @@ nav {
 }
 
 .home2 img {
-  height: 500px;
-  width: 500px;
-  margin-left: 200px;
+  height: auto;
+  width: 100%px;
+  max-width: 500px;
 }
 
 #section2 {
@@ -122,8 +123,7 @@ nav {
 
 .about1 h1 {
   font-size: 40px;
-  text-align: 40px;
-  padding-left: 560px;
+  text-align: center;
   padding-bottom: 40px;
 }
 
@@ -178,7 +178,8 @@ nav {
 }
 
 .service1 h1 {
-  padding-left: 60px;
+  font-size: 32px;
+  padding-left: 0 0 40px 0;
   color: rgb(8, 141, 229);
 }
 
@@ -192,7 +193,7 @@ nav {
 
 .service-card {
   background-color: palegreen;
-  height: 400px;
+  min-height: 400px;
   width: 340px;
   border-radius: 20px;
   padding: 22px;
@@ -206,11 +207,11 @@ nav {
   padding-bottom: 20px;
 }
 
-@media (max-width:600px) {
+@media (max-width: 600px) {
   .nav2 {
     display: none;
-  } 
-  
+  }
+
   .nav3 {
     display: block;
     font-size: 20px;
@@ -223,7 +224,7 @@ nav {
   }
 
   .home1 h1 {
-    font-size: 40px; 
+    font-size: 40px;
   }
 
   .home1 p {
@@ -236,8 +237,8 @@ nav {
     margin: 4px;
   }
 
-  .link a-grid {
-    grid-template-columns: repeat(2, 1fr);
+  .home2 img {
+    display: none;
   }
 
   #section2 {
@@ -263,16 +264,15 @@ nav {
   }
 
   #section3 {
-    padding: 60px 24px;
+    padding: 50px 24px;
   }
 
-  .skill h2 {
-    font-size: 24px;
-    padding: 0;
-    text-align: center;
+  .skill1 h2 {
+    font-size: 22px;
+    padding-bottom: 0px;
   }
 
-  skill-grid {
+  .skill-grid {
     grid-template-columns: repeat(2, 1fr);
   }
 
@@ -287,17 +287,18 @@ nav {
     margin: 10px;
   }
 
-    #section4 {
+  #section4 {
     padding: 50px 24px;
   }
 
-  .service-head h2 {
-    font-size: 24px;
+  .service2 {
+    flex-direction: column;
+    align-items: center;
   }
-}
 
-@media (max-width: 768px) {
-  .service-grid {
-    grid-template-columns: repeat(2, 1fr);
+  .service-card {
+    width: 100%;
+    height: auto;
   }
+
 }
