@@ -77,7 +77,10 @@ nav {
   background-size: cover;
   background-position: center;
   min-height: 100vh;
-  padding: 200px 100px 80px;
+  padding: 150px 100px 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .home1 h1 {
@@ -103,6 +106,12 @@ nav {
   font-size: 40px;
   text-decoration: none;
   color: black;
+}
+
+.home2 img {
+  height: 500px;
+  width: 500px;
+  margin-left: 200px;
 }
 
 #section2 {
@@ -165,35 +174,36 @@ nav {
 
 #section4 {
   background-color: #f0f4f8;
-  padding: 80px 60px;
+  padding: 80px 30px;
+}
+
+.service1 h1 {
+  padding-left: 60px;
+  color: rgb(8, 141, 229);
+}
+
+.service2 {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 30px;
+  padding: 20px;
 }
 
 .service-card {
-  background-color: white;
-  padding: 40px 30px;
-  border-radius: 12px;
-  text-align: center;
+  background-color: palegreen;
+  height: 400px;
+  width: 340px;
+  border-radius: 20px;
+  padding: 22px;
 }
 
-.service-card img {
-  width: 80px;
-  height: 80px;
-  margin-bottom: 20px;
-  object-fit: contain;
-}
-
-.service-card h3 {
-  font-size: 18px;
-  font-weight: bold;
-  margin-bottom: 16px;
-  color: black;
+.service-card h2 {
+  padding-bottom: 15px;
 }
 
 .service-card p {
-  font-size: 15px;
-  color: #444;
-  line-height: 1.7;
-  text-align: justify;
+  padding-bottom: 20px;
 }
 
 @media (max-width:600px) {
@@ -281,16 +291,10 @@ nav {
     padding: 50px 24px;
   }
 
-  .service-grid {
-    grid-template-columns: 1fr;  /* 1 column */
-  }
-
   .service-head h2 {
     font-size: 24px;
   }
-
 }
-
 
 @media (max-width: 768px) {
   .service-grid {
