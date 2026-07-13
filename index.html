@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Parth's - Portfolio</title>
+    <title>Parth's Portfolio</title>
     <link
       href="https://cdn.jsdelivr.net/npm/remixicon@4.9.0/fonts/remixicon.css"
       rel="stylesheet"
@@ -12,50 +12,39 @@
   </head>
   <body>
     <nav>
-      <div class="nav1">
+      <a class="nav1" href="#section1">
         <img src="Logo.jpg" alt="TechFalcon Logo" />
         <h2>TechFalcon</h2>
+      </a>
+      <div class="nav2" id="navLinks">
+        <a href="#section1" class="active">Home</a>
+        <a href="#section2">About</a>
+        <a href="#section3">Skills</a>
+        <a href="#section4">Services</a>
+        <a href="#section6">Contact</a>
       </div>
-      <div class="nav2">
-        <h2><a href="#section1" class="active">Home</a></h2>
-        <h2><a href="#section2">About</a></h2>
-        <h2><a href="#section3">Skills</a></h2>
-        <h2><a href="#section4">Services</a></h2>
-        <h2><a href="#section6">Contact</a></h2>
-      </div>
-      <div class="nav3">
-        <h2>
-          <i class="ri-menu-3-line"></i>
-        </h2>
-      </div>
+      <button class="nav3" id="menuToggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="navLinks">
+        <i class="ri-menu-3-line"></i>
+      </button>
     </nav>
 
     <main>
       <section id="section1">
         <div class="home1">
           <h1>Hi, I am Parth</h1>
-          <h1>Fullstack devloper</h1>
+          <h1>Fullstack developer</h1>
           <p>
-            I'm a Full-Stack Developer passionate about building clean, modern,
+            I’m a Full-Stack Developer passionate about building clean, modern,
             and user-friendly web applications.
           </p>
           <div class="link">
-            <a href="https://www.instagram.com/techfalcon50/"
-              ><i class="ri-instagram-line"></i
-            ></a>
-            <a href="https://x.com/parth_4090"
-              ><i class="ri-twitter-x-line"></i
-            ></a>
-            <a href="https://www.youtube.com/@TechFalcon50"
-              ><i class="ri-youtube-fill"></i
-            ></a>
-            <a href="https://github.com/parthmohod50"
-              ><i class="ri-github-fill"></i
-            ></a>
-            <a href="https://www.linkedin.com/in/parth-mohod-7265443b6/"
-              ><i class="ri-linkedin-box-fill"></i
-            ></a>
+            <a href="https://www.instagram.com/techfalcon50/" target="_blank" rel="noreferrer"><i class="ri-instagram-line"></i></a>
+            <a href="https://x.com/parth_4090" target="_blank" rel="noreferrer"><i class="ri-twitter-x-line"></i></a>
+            <a href="https://www.youtube.com/@TechFalcon50" target="_blank" rel="noreferrer"><i class="ri-youtube-fill"></i></a>
+            <a href="https://github.com/parthmohod50" target="_blank" rel="noreferrer"><i class="ri-github-fill"></i></a>
+            <a href="https://www.linkedin.com/in/parth-mohod-7265443b6/" target="_blank" rel="noreferrer"><i class="ri-linkedin-box-fill"></i></a>
           </div>
+          <a class="btn" href="#section6">Let’s work together</a>
         </div>
         <div class="home2">
           <img src="coder_png.png" alt="coder" />
@@ -87,42 +76,31 @@
         </div>
         <div class="skill-grid">
           <div class="skill-card">
-            <img
-              src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg"
-              alt="HTML"
-            />
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML" />
             <span>HTML</span>
           </div>
           <div class="skill-card">
-            <img
-              src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg"
-              alt="CSS"
-            />
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS" />
             <span>CSS</span>
           </div>
           <div class="skill-card">
-            <img
-              src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"
-              alt="JavaScript"
-            />
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript" />
             <span>JavaScript</span>
           </div>
           <div class="skill-card">
-            <img
-              src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg"
-              alt="Git"
-            />
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="Git" />
             <span>Git</span>
           </div>
         </div>
       </section>
+
       <section id="section4">
         <div class="service1">
           <h1>What I Provide</h1>
         </div>
         <div class="service2">
           <div class="service-card">
-            <h2>Frontend Devlopment</h2>
+            <h2>Frontend Development</h2>
             <p>
               I create modern, responsive, and user-friendly websites using
               clean UI/UX principles. My focus is on fast performance, smooth
@@ -135,7 +113,7 @@
             </p>
           </div>
           <div class="service-card">
-            <h2>Backend Devlopment</h2>
+            <h2>Backend Development</h2>
             <p>
               I build secure, scalable, and high-performance backend systems. I
               handle APIs, databases, authentication, and server-side logic to
@@ -162,6 +140,20 @@
           </div>
         </div>
       </section>
+
+      <section id="section6">
+        <div class="contact-card">
+          <h2>Let’s connect</h2>
+          <p>Open to freelance work, collaborations, and new opportunities.</p>
+          <div class="contact-links">
+            <a href="mailto:parthmohod50@gmail.com">Email</a>
+            <a href="https://www.linkedin.com/in/parth-mohod-7265443b6/" target="_blank" rel="noreferrer">LinkedIn</a>
+            <a href="https://github.com/parthmohod50" target="_blank" rel="noreferrer">GitHub</a>
+          </div>
+        </div>
+      </section>
     </main>
+
+    <script src="script.js"></script>
   </body>
 </html>

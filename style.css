@@ -1,16 +1,29 @@
+:root {
+  --bg: #f7fbff;
+  --text: #0f172a;
+  --accent: #088de5;
+  --accent-dark: #0b68b3;
+  --card: #ffffff;
+  --shadow: 0 12px 35px rgba(15, 23, 42, 0.12);
+}
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "consolas";
+  font-family: "Consolas", "Segoe UI", sans-serif;
 }
 
-html,
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   width: 100%;
   min-height: 100vh;
   overflow-x: hidden;
-  background-color: white;
+  background-color: var(--bg);
+  color: var(--text);
 }
 
 nav {
@@ -20,55 +33,65 @@ nav {
   position: fixed;
   justify-content: space-between;
   align-items: center;
-  gap: 20px;
-  background-color: white;
-  box-shadow: 0px 4px 20px rgb(150, 150, 150);
+  padding: 0 30px;
+  background-color: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(8px);
+  box-shadow: 0 6px 25px rgba(15, 23, 42, 0.08);
   z-index: 100;
-}
-
-.nav1 img {
-  margin: 15px;
-  height: 50px;
-  width: 50px;
-  border-radius: 50%;
+  min-height: 78px;
 }
 
 .nav1 {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 12px;
+  text-decoration: none;
+  color: var(--text);
 }
 
-.nav2 i {
-  display: none;
+.nav1 img {
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  object-fit: cover;
 }
 
 .nav2 {
   display: flex;
   align-items: center;
-  font-size: 13px;
+  gap: 8px;
+}
+
+.nav2 a {
+  border-radius: 999px;
+  padding: 8px 14px;
+  text-decoration: none;
+  color: var(--text);
+  font-size: 0.95rem;
+  transition: all 0.25s ease;
+}
+
+.nav2 a:hover,
+.nav2 a.active {
+  background: linear-gradient(135deg, var(--accent), #4ed8ff);
+  color: white;
 }
 
 .nav3 {
   display: none;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  padding: 8px;
 }
 
-.nav2 a {
-  border-radius: 8px;
-  padding: 8px 16px;
-  text-decoration: none;
-  color: black;
+.nav3 i {
+  font-size: 24px;
+  color: var(--text);
 }
 
-.nav2 a:hover {
-  background-color: rgb(51, 219, 242);
-}
-
-.nav2 button {
-  font-size: larger;
-  background-color: white;
-  border: white;
-  padding-right: 10px;
+main section {
+  padding: 110px 60px 80px;
 }
 
 #section1 {
@@ -77,228 +100,287 @@ nav {
   background-size: cover;
   background-position: center;
   min-height: 100vh;
-  padding: 150px 100px 80px;
   display: flex;
-  gap: 100px;
+  gap: 60px;
   justify-content: center;
   align-items: center;
 }
 
+.home1 {
+  max-width: 560px;
+}
+
 .home1 h1 {
-  font-size: 50px;
-  color: black;
+  font-size: clamp(2.2rem, 5vw, 3.4rem);
+  color: var(--text);
+  line-height: 1.1;
 }
 
 .home1 p {
-  max-width: 500px;
   padding-top: 20px;
-  padding-bottom: 50px;
-  font-size: 1.5vw;
+  padding-bottom: 28px;
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: #334155;
 }
 
 .link {
   display: flex;
   gap: 10px;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
 }
 
 .link a {
-  padding: 10px;
-  margin: 8px;
-  font-size: 40px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
   text-decoration: none;
-  color: black;
+  color: var(--text);
+  background: rgba(255, 255, 255, 0.72);
+  box-shadow: 0 8px 20px rgba(15, 23, 42, 0.08);
+  transition: transform 0.2s ease;
+}
+
+.link a:hover {
+  transform: translateY(-3px);
+}
+
+.btn {
+  display: inline-block;
+  margin-top: 8px;
+  padding: 12px 18px;
+  border-radius: 999px;
+  background: linear-gradient(135deg, var(--accent), #4ed8ff);
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  box-shadow: var(--shadow);
 }
 
 .home2 img {
+  width: min(100%, 480px);
   height: auto;
-  width: 100%px;
-  max-width: 500px;
 }
 
 #section2 {
   background-color: white;
-  padding: 80px 60px;
-  background-color: white;
 }
 
-.about1 h1 {
-  font-size: 40px;
+.about1 h1,
+.service1 h1 {
+  font-size: 2rem;
   text-align: center;
-  padding-bottom: 40px;
+  padding-bottom: 26px;
+  color: var(--accent);
 }
 
 .about2 {
-  padding: 40px;
+  padding: 24px 0;
+  max-width: 1100px;
+  margin: 0 auto;
 }
 
 .about2 h2 {
-  color: rgb(8, 141, 229);
-  font-size: 30px;
-  padding-bottom: 20px;
+  color: var(--accent);
+  font-size: 1.6rem;
+  padding-bottom: 14px;
 }
 
 .about2 p {
-  font-size: 20px;
-  max-width: 1200px;
-  line-height: 1.7;
+  font-size: 1.05rem;
+  line-height: 1.8;
+  color: #334155;
 }
 
 #section3 {
-  background-color: white;
   background-image: url(Mountain_background.png);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  min-height: 100vh;
-  padding: 100px 60px;
 }
 
 .skill1 h2 {
-  color: rgb(8, 141, 229);
-  font-size: 30px;
+  color: var(--accent);
+  font-size: 1.7rem;
   padding-bottom: 20px;
-  padding-left: 35px;
+  padding-left: 10px;
+}
+
+.skill-grid {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  margin-top: 12px;
 }
 
 .skill-card {
-  font-size: 20px;
   display: flex;
-  justify-content: start;
   align-items: center;
+  gap: 16px;
+  padding: 18px 20px;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 16px;
+  box-shadow: var(--shadow);
+  font-size: 1rem;
 }
+
 .skill-card img {
-  height: 60px;
-  width: 60px;
-  margin: 30px;
+  height: 46px;
+  width: 46px;
 }
 
 #section4 {
   background-color: #f0f4f8;
-  padding: 80px 30px;
-}
-
-.service1 h1 {
-  font-size: 32px;
-  padding-left: 0 0 40px 0;
-  color: rgb(8, 141, 229);
 }
 
 .service2 {
   display: flex;
-  justify-content: space-around;
-  align-items: center;
-  margin: 30px;
-  padding: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 24px;
+  margin-top: 20px;
 }
 
 .service-card {
-  background-color: palegreen;
-  min-height: 400px;
-  width: 340px;
+  background: var(--card);
+  min-height: 360px;
+  width: min(100%, 320px);
   border-radius: 20px;
   padding: 22px;
+  box-shadow: var(--shadow);
 }
 
 .service-card h2 {
-  padding-bottom: 15px;
+  padding-bottom: 12px;
+  color: var(--accent-dark);
 }
 
 .service-card p {
-  padding-bottom: 20px;
+  padding-bottom: 16px;
+  line-height: 1.7;
+  color: #334155;
 }
 
-@media (max-width: 600px) {
-  .nav2 {
-    display: none;
-  }
+#section6 {
+  padding: 80px 24px 100px;
+}
 
-  .nav3 {
-    display: block;
-    font-size: 20px;
-    cursor: pointer;
-    padding: 10px;
-  }
+.contact-card {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 36px;
+  background: linear-gradient(135deg, #ffffff, #eaf7ff);
+  border-radius: 24px;
+  box-shadow: var(--shadow);
+  text-align: center;
+}
 
+.contact-card h2 {
+  font-size: 1.8rem;
+  color: var(--accent-dark);
+  margin-bottom: 10px;
+}
+
+.contact-card p {
+  color: #475569;
+  margin-bottom: 22px;
+}
+
+.contact-links {
+  display: flex;
+  justify-content: center;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+.contact-links a {
+  text-decoration: none;
+  padding: 10px 16px;
+  border-radius: 999px;
+  background: var(--accent);
+  color: white;
+}
+
+@media (max-width: 900px) {
   #section1 {
-    padding: 150px 40px 50px;
+    flex-direction: column;
+    text-align: center;
+    padding-top: 130px;
   }
 
-  .home1 h1 {
-    font-size: 40px;
-  }
-
-  .home1 p {
-    font-size: 18px;
+  .home1 {
     max-width: 100%;
   }
 
-  .link a {
-    font-size: 30px;
-    margin: 4px;
-  }
-
-  .home2 img {
-    display: none;
-  }
-
-  #section2 {
-    padding: 50px 24px;
-  }
-
-  .about1 h1 {
-    font-size: 28px;
-    text-align: center;
-    padding-left: 0;
-  }
-
-  .about2 {
-    padding: 20px 0;
-  }
-
-  .about2 h2 {
-    font-size: 22px;
-  }
-
-  .about2 p {
-    font-size: 15px;
-  }
-
-  #section3 {
-    padding: 50px 24px;
-  }
-
-  .skill1 h2 {
-    font-size: 22px;
-    padding-bottom: 0px;
+  .link {
+    justify-content: center;
   }
 
   .skill-grid {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 600px) {
+  nav {
+    padding: 0 18px;
   }
 
-  .skill-card {
-    font-size: 14px;
-    padding: 12px;
-  }
-
-  .skill-card img {
-    height: 35px;
-    width: 35px;
-    margin: 10px;
-  }
-
-  #section4 {
-    padding: 50px 24px;
-  }
-
-  .service2 {
+  .nav2 {
+    position: absolute;
+    top: 78px;
+    right: 16px;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
+    background: white;
+    padding: 14px;
+    border-radius: 16px;
+    box-shadow: var(--shadow);
+    display: none;
+  }
+
+  .nav2.active {
+    display: flex;
+  }
+
+  .nav3 {
+    display: inline-flex;
+  }
+
+  main section {
+    padding: 100px 24px 60px;
+  }
+
+  #section1 {
+    min-height: auto;
+  }
+
+  .home1 h1 {
+    font-size: 2.2rem;
+  }
+
+  .home1 p {
+    font-size: 1rem;
+  }
+
+  .link a {
+    width: 42px;
+    height: 42px;
+  }
+
+  .skill-grid {
+    grid-template-columns: 1fr;
   }
 
   .service-card {
-    width: 100%;
-    height: auto;
+    min-height: auto;
   }
 
+  .contact-card {
+    padding: 24px 18px;
+  }
 }
